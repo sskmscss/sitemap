@@ -96,7 +96,7 @@ $writer->startTag(
 foreach my $key (sort keys %url_list) {
     $writer->startTag('url');
     $writer->startTag('loc');
-    $writer->characters('https://www.xfinity.com/mobile' . $key);
+    $writer->characters($curl->{conf}->{'SITE_URL'} . $key);
     $writer->endTag('loc');
     $writer->startTag('changefreq');
     $writer->characters('weekly');
